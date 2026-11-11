@@ -1,0 +1,46 @@
+baseURL = "https://example.com/"
+locale = "en-us"
+title = "sample-hugo-site"
+
+# The theme is a Hugo Module pinned in go.mod. Hugo downloads it on the first
+# build; update it with "hugo mod get -u".
+[module]
+  [[module.imports]]
+    path = "github.com/gohugo-ananke/ananke/v2"
+
+[params]
+  description = "The payments team's \"home on the web\": news & guides"
+  author = "group:default/platform-team"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    pageRef = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    pageRef = "/posts"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 3
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 4
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5

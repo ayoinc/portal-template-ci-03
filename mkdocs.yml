@@ -1,0 +1,15 @@
+site_name: "sample-hugo-site"
+site_description: "The payments team's \"home on the web\": news & guides"
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
+  - d2
+
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn

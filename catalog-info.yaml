@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-hugo-site
+  description: "The payments team's \"home on the web\": news & guides"
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: example-org/sample-hugo-site
+  tags:
+    - hugo
+    - static-site
+    - website
+spec:
+  type: website
+  lifecycle: production
+  owner: group:default/platform-team
